@@ -20,14 +20,13 @@ export function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {dashboardStats.map((stat, index) => (
           <StatCard
-            key={stat.id}
+            key={index} // Using index as key since id is not available
             title={stat.title}
             value={stat.value}
             icon={stat.icon}
             description={stat.description}
             trend={stat.trend}
             className="animate-scale-in"
-            // Remover o prop style e adicionar o delay via CSS classes
             data-delay={index * 100}
           />
         ))}
@@ -46,7 +45,6 @@ export function Dashboard() {
               key={news.id}
               news={news}
               className="mb-6 animate-scale-in"
-              // Remover o prop style e adicionar o delay via CSS classes
               data-delay={index * 100}
             />
           ))}
