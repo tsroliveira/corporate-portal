@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,9 +82,7 @@
     --sidebar-border: 217 33% 17%;
     --sidebar-ring: 210 100% 50%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -137,5 +134,46 @@
   
   .page-transition-exit-active {
     @apply opacity-0 transition-opacity duration-300;
+  }
+  
+  /* Animation delay based on data-delay attribute */
+  .animate-scale-in[data-delay="0"] {
+    animation-delay: 0ms;
+  }
+  
+  .animate-scale-in[data-delay="100"] {
+    animation-delay: 100ms;
+  }
+  
+  .animate-scale-in[data-delay="200"] {
+    animation-delay: 200ms;
+  }
+  
+  .animate-scale-in[data-delay="300"] {
+    animation-delay: 300ms;
+  }
+  
+  .animate-scale-in[data-delay="400"] {
+    animation-delay: 400ms;
+  }
+  
+  .animate-slide-in[data-delay="0"] {
+    animation-delay: 0ms;
+  }
+  
+  .animate-slide-in[data-delay="100"] {
+    animation-delay: 100ms;
+  }
+  
+  .animate-slide-in[data-delay="200"] {
+    animation-delay: 200ms;
+  }
+  
+  .animate-slide-in[data-delay="300"] {
+    animation-delay: 300ms;
+  }
+  
+  .animate-slide-in[data-delay="400"] {
+    animation-delay: 400ms;
   }
 }

@@ -31,7 +31,8 @@ export function News() {
             key={news.id} 
             news={news} 
             className="animate-scale-in"
-            style={{ animationDelay: `${index * 100}ms` }}
+            // Remover o prop style e adicionar o delay via CSS classes
+            data-delay={index * 100}
           />
         ))}
       </div>

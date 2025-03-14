@@ -17,14 +17,18 @@ export interface NewsItem {
 interface NewsCardProps {
   news: NewsItem;
   className?: string;
+  "data-delay"?: number;
 }
 
-export function NewsCard({ news, className }: NewsCardProps) {
+export function NewsCard({ news, className, "data-delay": delay }: NewsCardProps) {
   return (
-    <div className={cn(
-      "glass-card rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md group",
-      className
-    )}>
+    <div 
+      className={cn(
+        "glass-card rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md group",
+        className
+      )}
+      data-delay={delay}
+    >
       {news.image && (
         <div className="relative h-48 overflow-hidden">
           <img

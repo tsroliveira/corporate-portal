@@ -12,6 +12,7 @@ interface StatCardProps {
     positive: boolean;
   };
   className?: string;
+  "data-delay"?: number;
 }
 
 export function StatCard({
@@ -21,12 +22,16 @@ export function StatCard({
   description,
   trend,
   className,
+  "data-delay": delay,
 }: StatCardProps) {
   return (
-    <div className={cn(
-      "glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-md",
-      className
-    )}>
+    <div 
+      className={cn(
+        "glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-md",
+        className
+      )}
+      data-delay={delay}
+    >
       <div className="flex items-start justify-between">
         <div className="space-y-1">
           <p className="text-sm font-medium text-muted-foreground">{title}</p>
